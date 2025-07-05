@@ -186,7 +186,7 @@ Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/c
 <div align="center">
 
 ## 🎨 Basic Git Workflow Diagram
-
+✅ Improved formatting for GitHub compatibility. Use fenced code blocks instead of custom diagrams if needed.
 </div>
 
 ```
