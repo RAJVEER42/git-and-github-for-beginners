@@ -213,6 +213,7 @@ Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/c
 
 ## 💻 GitHub GUI Tips
 
+✅ Centered headers like <div align="center"> are not supported in GitHub-flavored markdown. Use plain Markdown or custom HTML <p align="center"> if needed.
 </div>
 
 Not comfortable with the terminal?
