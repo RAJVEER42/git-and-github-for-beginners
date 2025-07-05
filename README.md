@@ -192,15 +192,15 @@ Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/c
 ```
       ┌──────────┐
       │  git init  │ ← Start repo
-      └────────┘
+      └────────--┘
            ↓
     ┌───────────────┐
     │  git add .    │ ← Stage changes
-    └──────────────┘
+    └──────────────-┘
          ↓
   ┌────────────────────┐
   │ git commit -m "" │ ← Save changes
-  └─────────────────┘
+  └─────────────────---┘
         ↓
  ┌─────────────────────────┐
  │ git push origin main│ ← Upload to GitHub
