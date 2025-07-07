@@ -196,6 +196,24 @@ ssh -T git@github.com
 
 <div align="center">
 
+---
+
+<div align="center">
+
+## 🏷️ Tagging
+
+</div>
+
+### 20. Tag a Commit
+
+```bash
+git tag v1.0
+git tag -a v1.0 -m "v1.0 release"
+git push origin v1.0
+```
+
+---
+
 ## ❌ Common Git Errors & Fixes
 
 </div>
