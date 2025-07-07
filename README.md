@@ -359,3 +359,9 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 Feel free to use, share, and adapt this content with proper attribution.
 
 ---
+
+> *"Version control is not just a tool — it's a mindset."*  
+> — **Anonymous**
+
+---
+
