@@ -53,25 +53,48 @@ git commit -m "Add homepage"
 
 ---
 
+### 🔄 6. Check Commit History
+
+```bash
+git log              # View full history
+git log --oneline    # Condensed view
+```
+
+### 🚚 7. Rename or Move Files
+
+```bash
+git mv oldname.txt newname.txt
+```
+
+### 🔍 8. View File Changes
+
+```bash
+git diff             # View unstaged changes
+git diff --staged    # View staged changes
+git diff HEAD        # Compare working directory with last commit
+```
+
+---
+
 <div align="center">
 
 ## 🗑️ Working with Remotes
 
 </div>
 
-### 6. Add Remote Origin
+### 9. Add Remote Origin
 
 ```bash
 git remote add origin https://github.com/username/my-repo.git
 ```
 
-### 7. Push Changes
+### 10. Push Changes
 
 ```bash
 git push -u origin main
 ```
 
-### 8. Pull Updates
+### 11. Pull Updates
 
 ```bash
 git pull origin main
@@ -85,13 +108,13 @@ git pull origin main
 
 </div>
 
-### 9. Create and Switch Branch
+### 12. Create and Switch Branch
 
 ```bash
 git checkout -b feature-login
 ```
 
-### 10. Merge a Branch
+### 13. Merge a Branch
 
 ```bash
 git checkout main
@@ -106,19 +129,19 @@ git merge feature-login
 
 </div>
 
-### 11. Undo Last Commit (keep changes)
+### 14. Undo Last Commit (keep changes)
 
 ```bash
 git reset --soft HEAD~1
 ```
 
-### 12. Discard Changes
+### 15. Discard Changes
 
 ```bash
 git checkout -- about.html
 ```
 
-### 13. Remove Untracked Files
+### 16. Remove Untracked Files
 
 ```bash
 git clean -fd
@@ -126,20 +149,65 @@ git clean -fd
 
 ---
 
+### 💾 17. Stash Changes (Temporarily Save Work)
+
+```bash
+git stash         # Save current changes
+git stash list    # List stashes
+git stash apply   # Reapply latest stash
+```
+
+---
+
+<div align="center">
+
+## ⚙️ Configuration
+
+</div>
+
+### 18. Set Git User Info
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+---
+
+<div align="center">
+
+## 🔐 HTTPS vs SSH
+
+</div>
+
+### 19. Quick Guide
+
+- **HTTPS:** Easier to set up, ask for credentials/token.
+- **SSH:** More secure, needs key setup.
+
+```bash
+# Check if SSH is working
+ssh -T git@github.com
+```
+
+[GitHub SSH Setup Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
+
+
 <div align="center">
 
 ## ❌ Common Git Errors & Fixes
 
 </div>
 
-**Error:** `fatal: not a git repository`
+**Error:** `fatal: not a git repository`  
 **Fix:**
 
 ```bash
 git init
 ```
 
-**Error:** `failed to push some refs`
+**Error:** `failed to push some refs`  
 **Fix:**
 
 ```bash
@@ -147,27 +215,26 @@ git pull --rebase origin main
 git push
 ```
 
-**Error:** Merge conflict
+**Error:** Merge conflict  
 **Fix:**
 
-* Edit file to resolve conflict
-  Then:
+- Edit conflicting files
+- Then:
 
 ```bash
 git add filename
 git commit
 ```
 
-**Error:** Detached HEAD
+**Error:** Detached HEAD  
 **Fix:**
 
 ```bash
 git checkout main
 ```
 
-**Error:** Permission denied (publickey)
-**Fix:**
-Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+**Error:** Permission denied (publickey)  
+**Fix:** [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 ---
 
@@ -177,34 +244,36 @@ Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/c
 
 </div>
 
-* [Official Git Documentation](https://git-scm.com/doc)
-* [GitHub Docs](https://docs.github.com/)
-* [Learn Git Branching (interactive)](https://learngitbranching.js.org/)
+- [Official Git Documentation](https://git-scm.com/doc)
+- [GitHub Docs](https://docs.github.com/)
+- [Learn Git Branching (interactive)](https://learngitbranching.js.org/)
+- [Oh My Git! (interactive Git game)](https://ohmygit.org/)
+- [GitHub Cheat Sheet PDF](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 
 ---
 
 <div align="center">
 
 ## 🎨 Basic Git Workflow Diagram
-✅ Improved formatting for GitHub compatibility. Use fenced code blocks instead of custom diagrams if needed.
+
 </div>
 
 ```
-      ┌──────────┐
-      │  git init  │ ← Start repo
-      └────────--┘
+      ┌──────────────┐
+      │  git init    │ ← Start repo
+      └──────────────┘
            ↓
-    ┌───────────────┐
-    │  git add .    │ ← Stage changes
-    └──────────────-┘
-         ↓
-  ┌────────────────────┐
-  │ git commit -m "" │ ← Save changes
-  └─────────────────---┘
-        ↓
- ┌─────────────────────────┐
- │ git push origin main│ ← Upload to GitHub
- └─────────────────────────┘
+    ┌────────────────┐
+    │  git add .     │ ← Stage changes
+    └────────────────┘
+           ↓
+  ┌───────────────────────┐
+  │ git commit -m "msg"   │ ← Save snapshot
+  └───────────────────────┘
+           ↓
+ ┌────────────────────────────┐
+ │ git push origin main       │ ← Push to GitHub
+ └────────────────────────────┘
 ```
 
 ---
@@ -213,18 +282,15 @@ Set up SSH: [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/c
 
 ## 💻 GitHub GUI Tips
 
-✅ Centered headers like <div align="center"> are not supported in GitHub-flavored markdown. Use plain Markdown or custom HTML <p align="center"> if needed.
 </div>
 
-Not comfortable with the terminal?
+✅ Use **GitHub Desktop** for visual Git operations  
+✅ On **GitHub.com**, you can:
 
-✅ Use **GitHub Desktop** to commit, push, pull, and merge with a GUI.
-
-✅ On **GitHub.com** you can:
-
-* Edit files directly in-browser
-* Create branches
-* Open and manage pull requests
+- Edit files
+- Create branches
+- Open pull requests
+- Merge via UI
 
 ---
 
@@ -247,13 +313,24 @@ git push -u origin main
 
 <div align="center">
 
+## 💡 Pro Tips
+
+</div>
+
+- Use a `.gitignore` file to skip unwanted files.
+- Commit frequently with clear messages.
+- Use `git pull --rebase` to avoid extra merge commits.
+- Always create feature branches for updates.
+
+---
+
+<div align="center">
+
 ## 💬 Contributing
 
 </div>
 
 Pull requests are welcome! If you have useful tips or improvements, feel free to open an issue or submit a PR.
-
----
 
 ---
 
