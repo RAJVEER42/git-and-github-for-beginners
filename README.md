@@ -4,7 +4,7 @@
 
 </div>
 
-Welcome! This repo is designed for beginners learning Git and GitHub. It includes essential commands, real examples, common errors, and extra tips to help you get comfortable with version control.
+<p align="center"> Welcome! This repo is designed for beginners learning Git and GitHub. It includes essential commands, real examples, common errors, and extra tips to help you get comfortable with version control. </p>
 
 ---
 
