@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧰 Git & GitHub Commands Cheat Sheet for Beginners
+# 🧰 Git & GitHub Commands Cheat Sheet for Beginners 
 
 </div>
 
